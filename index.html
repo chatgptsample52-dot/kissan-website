@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kissan - Fresh Jams, Ketchup & Spreads</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fff4e6, #ffe6f0);
+    }
+    .slider {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .slides {
+      display: flex;
+      transition: transform 1s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: center;
+    }
+    .slider-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .slider-btn {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.75rem;
+      border-radius: 50%;
+      margin: 0 1rem;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .slider-btn:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-red-600 text-white py-6 shadow-xl sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center px-6">
+      <h1 class="text-4xl font-extrabold tracking-wide">Kissan</h1>
+      <nav class="space-x-6 text-lg font-medium">
+        <a href="#products" class="hover:underline">Products</a>
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="container mx-auto my-10 px-6">
+    <div class="slider">
+      <div class="slides" id="slides">
+        <div class="slide" style="background-image: url('jamfruit.jpg');"></div>
+        <div class="slide" style="background-image: url('ketchuptomato.jpg');"></div>
+        <div class="slide" style="background-image: url('peanutbutter.jpg');"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="slider-btn" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-14 text-red-600">Our Delicious Range</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gradient-to-br from-pink-100 to-red-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition">
+          <img src="D:\kissan\jam.jpg" class="rounded-lg mb-6 mx-auto">
+          <h3 class="text-3xl font-semibold text-center mb-4">Jams</h3>
+          <p class="text-lg text-center mb-6">Made with the goodness of real fruits for a sweet, refreshing taste.</p>
+          <div class="flex justify-center"><a href="https://www.amazon.in/Kissan-Mix-Fruit-Jam-500g/dp/B00T7GD1C2?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&smid=A15APWRK6P7LBV&th=1" class="bg-red-600 text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-red-700 transition">Shop Now</a></div>
+        </div>
+        <div class="bg-gradient-to-br from-yellow-100 to-orange-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition">
+          <img src="D:\kissan\Ketchup.jpg" alt="Ketchup" class="rounded-lg mb-6 mx-auto">
+          <h3 class="text-3xl font-semibold text-center mb-4">Ketchup</h3>
+          <p class="text-lg text-center mb-6">Rich tomato flavor with a burst of tangy goodness for every meal.</p>
+          <div class="flex justify-center"><a href="https://www.amazon.in/Kissan-Fresh-Tomato-Ketchup-Pouch/dp/B09C3STJ24/ref=sr_1_5?adgrpid=161166966360&dib=eyJ2IjoiMSJ9.13_EY9G2LOkqYfn2B0dvpOhd2dgAsXXEmgF7LRvVUSj2RvVKk4ljec48wUJ-2TKVgjhDU4Rs03jsCkWJlBV-AIJ4Yc-SGoRRsHZ5ThVT0suNs0rHJSP_rgUhdRAw5s4YBq7PrJZYqa7WgfMwqSW3g-Ssht_4myf8Xmpx7cRzQxBjimqo5BrrpYSvvMEGqvNNLwjeeNIBeZzKsp1eKUFoLi6Q9qqjPiSkENu4zjfjQlTy2QHKgktsJq-kxCUaXmtRWbBeX5nZ36hzdFGgUmrc-X1xcwzP7O4GZb6Pn0_XN-8.YPpbNjuUWgnche1FAO9rl8K4xl1YV7HHBOGgRA1JZ1I&dib_tag=se&hvadid=690363123976&hvdev=c&hvlocphy=1007823&hvnetw=g&hvqmt=e&hvrand=13876266021246763190&hvtargid=kwd-1530356220469&hydadcr=22540_2209882&keywords=kissan%2Btomato%2Bketchup%2Bamazon&mcid=80885461ee8038a68adf36d29c3820fc&nsdOptOutParam=true&qid=1759134772&sr=8-5&th=1" class="bg-red-600 text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-red-700 transition">Shop Now</a></div>
+        </div>
+        <div class="bg-gradient-to-br from-green-100 to-lime-100 p-8 rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition">
+          <img src="D:\kissan\butter.jpg" alt="Spreads" class="rounded-lg mb-6 mx-auto">
+          <h3 class="text-3xl font-semibold text-center mb-4">Spreads</h3>
+          <p class="text-lg text-center mb-6">Smooth and tasty spreads that make every snack irresistible.</p>
+          <div class="flex justify-center"><a href="https://www.amazon.in/Kissan-Peanut-Butter-350g/dp/B08L8HR5FD/ref=asc_df_B08L8HR5FD?mcid=fdf6da2ea9ce3db09014d1377ebd2530&tag=googleshopdes-21&linkCode=df0&hvadid=709855497315&hvpos=&hvnetw=g&hvrand=6225486622601398333&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1007823&hvtargid=pla-1114649727284&gad_source=1&th=1" class="bg-red-600 text-white px-6 py-3 rounded-full text-lg font-bold hover:bg-red-700 transition">Shop Now</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold text-red-600 mb-8">About Kissan</h2>
+      <p class="text-2xl max-w-4xl mx-auto leading-relaxed">Kissan has been bringing joy to breakfast tables for decades. Our jams, ketchup, and spreads are crafted with love and the goodness of real fruits and tomatoes, making every meal delightful.</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-5xl font-bold text-red-600 mb-8">Get in Touch</h2>
+      <p class="text-lg mb-8">We’d love to hear from you! Reach out for queries, feedback, or collaborations.</p>
+      <a href="https://www.kissan.in/contact-us.html" class="bg-red-600 text-white px-10 py-4 rounded-full text-2xl font-bold hover:bg-red-700 transition">Email Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-red-600 text-white py-10 text-center text-lg">
+    <p>&copy; 2025 Kissan | Made with ❤️ and real fruits</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+
+    function showSlide(index) {
+      if (index >= totalSlides) currentIndex = 0;
+      else if (index < 0) currentIndex = totalSlides - 1;
+      else currentIndex = index;
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() { showSlide(currentIndex + 1); }
+    function prevSlide() { showSlide(currentIndex - 1); }
+
+    setInterval(nextSlide, 5000);
+  </script>
+</body>
+</html>
+```
